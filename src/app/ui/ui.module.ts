@@ -5,5 +5,6 @@ import { UiComponent } from './components/ui/ui.component';
 @NgModule({
   declarations: [UiComponent],
   imports: [CommonModule],
+  exports: [UiComponent],
 })
 export class UiModule {}
