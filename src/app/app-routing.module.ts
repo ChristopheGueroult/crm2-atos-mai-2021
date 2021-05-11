@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { PageForgotComponent } from './login/pages/page-forgot/page-forgot.component';
 import { PageResetComponent } from './login/pages/page-reset/page-reset.component';
 import { PageSignInComponent } from './login/pages/page-sign-in/page-sign-in.component';
@@ -31,7 +31,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, {
+      preloadingStrategy: PreloadAllModules,
+    }),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
