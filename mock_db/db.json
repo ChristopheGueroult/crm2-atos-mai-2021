@@ -1,0 +1,50 @@
+{
+  "orders": [
+    {
+      "tjmHt": 1200,
+      "nbJours": 1,
+      "tva": 20,
+      "state": "OPTION",
+      "typePresta": "coaching",
+      "client": "ddd",
+      "comment": "un commentaire",
+      "id": 1
+    },
+    {
+      "tjmHt": 1200,
+      "nbJours": 1,
+      "tva": 20,
+      "state": "OPTION",
+      "typePresta": "coaching",
+      "client": "ddd",
+      "comment": "un autre commentaire",
+      "id": 2
+    }
+  ],
+  "clients": [
+    {
+      "state": "ACTIVE",
+      "tva": 20,
+      "id": 1,
+      "name": "Christophe2",
+      "totalCaHt": 12000,
+      "comment": "un comment pour client christophe2"
+    },
+    {
+      "state": "INACTIVE",
+      "tva": 20,
+      "id": 2,
+      "name": "Modis",
+      "totalCaHt": 120000,
+      "comment": "un comment pour client modis"
+    },
+    {
+      "tva": 20,
+      "state": "ACTIVE",
+      "name": "modis",
+      "totalCaHt": 0,
+      "comment": "rsger",
+      "id": 3
+    }
+  ]
+}

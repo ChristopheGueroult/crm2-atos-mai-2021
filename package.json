@@ -8,7 +8,10 @@
     "buildProd": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "compodoc": "compodoc -p tsconfig.json -o -s",
+    "analyze": "ng build --prod --stats-json && webpack-bundle-analyzer dist/crm2-atos-mai/stats.json",
+    "jsonServer": "json-server --watch mock_db/db.json"
   },
   "private": true,
   "dependencies": {
@@ -27,14 +30,18 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@ng-bootstrap/ng-bootstrap": "^9.1.0",
     "bootstrap": "^4.5.0",
+    "dayjs": "^1.10.4",
+    "moment": "^2.29.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
+    "webpack-bundle-analyzer": "^4.4.1",
     "zone.js": "~0.11.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1102.12",
     "@angular/cli": "~11.2.12",
     "@angular/compiler-cli": "~11.2.13",
+    "@compodoc/compodoc": "^1.1.11",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
