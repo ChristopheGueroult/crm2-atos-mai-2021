@@ -23,12 +23,12 @@
   ],
   "clients": [
     {
-      "state": "ACTIVE",
+      "state": "INACTIVE",
       "tva": 20,
       "id": 1,
-      "name": "Christophe2",
-      "totalCaHt": 12000,
-      "comment": "un comment pour client christophe2"
+      "name": "Capgemini",
+      "totalCaHt": 120000,
+      "comment": "un comment pour client modis"
     },
     {
       "state": "INACTIVE",

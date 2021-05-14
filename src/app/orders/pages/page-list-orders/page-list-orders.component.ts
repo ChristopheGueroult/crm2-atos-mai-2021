@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
+import { StateOrder } from 'src/app/core/enums/state-order.enum';
 import { Order } from 'src/app/core/models/order';
 import { OrdersService } from '../../services/orders.service';
 
@@ -9,6 +10,7 @@ import { OrdersService } from '../../services/orders.service';
   styleUrls: ['./page-list-orders.component.scss'],
 })
 export class PageListOrdersComponent implements OnInit {
+  public states = Object.values(StateOrder);
   private test = new Observable((sub) => {
     sub.next('un joli string a get dans un subscribe');
   });
@@ -41,6 +43,14 @@ export class PageListOrdersComponent implements OnInit {
 
   public changeTitle(): void {
     this.title = 'New list orders';
+  }
+
+  public changeState(e: any, item: Order): void {
+    const state = e.target.value;
+    this.ordersService.changeState(item, state).subscribe((res) => {
+      // codes erreur de l'api
+      item = res;
+    });
   }
 
   ngOnDestroy(): void {
