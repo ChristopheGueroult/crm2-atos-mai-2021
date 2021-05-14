@@ -7,10 +7,11 @@
       <td>{{ item.client }}</td>
       <td>{{ item.nbJours }}</td>
       <td>{{ item.tjmHt }}</td>
-      <td>Total HT</td>
-      <td>Total TTC</td>
+      <td>{{ item.tjmHt | total: item.nbJours }}</td>
+      <td>{{ item.tjmHt | total: item.nbJours: item.tva }}</td>
       <td>{{ item.state }}</td>
     </tr>
   </app-table-light>
+
   <app-btn route="add" label="Add Order"></app-btn>
 </app-template-full-width>
