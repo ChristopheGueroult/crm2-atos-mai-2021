@@ -25,6 +25,9 @@ export class OrdersService {
   }
 
   // add item in collecion
+  public add(item: Order): Observable<Order> {
+    return this.http.post<Order>(`${this.urlApi}/orders`, item);
+  }
 
   // update item in collection
   public changeState(item: Order, state: StateOrder): Observable<Order> {

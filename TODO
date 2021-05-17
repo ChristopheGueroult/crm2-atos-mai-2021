@@ -1,10 +1,18 @@
 ☐ Equipe des souris rouges (Yassine, Jeremy, Guillaume, Hugo)
-  ☐ 410
+  ☐ 570
 
 ☐ Equipe des souris Bleues (Enzo, Lucas, Mohamet, Laura, Evergiste)
-  ☐ 415
+  ☐ 465
 
+☐ TP PAGE LIST CLIENTS
+  ☐ creer enum state-client à créer avec les states ACTIVE, INACTIVE
+  ☐ Interface ClientI (modèle de donnée dans db.json)
+  ☐ Class Client (modèle)
+  ☐ ClientsService (en prenant example sur OrdersService)
+  ☐ PageListClients
+    ☐ Utiliser <app-template-full-width>
+    ☐ Ulisiser <app-table-light>
+      ☐ Afficher : Name, TotalHT, Tva, TotalTTC, State
+      ☐ Le total TTC est à calculer en utilisant le même pipe total (sans faire aucune modif dans le pipe)
+      ☐ Utiliser la même directive StateDirective (sans faire aucune modif dans la directive) (pensez à créer les classe .state-active et .state-inactive dans le scss de page list clients)
 
-☐ echange un membre de votre equipe
-☐ echanger les points
-☐ mettre les points

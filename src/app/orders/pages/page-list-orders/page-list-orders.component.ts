@@ -49,7 +49,7 @@ export class PageListOrdersComponent implements OnInit {
     const state = e.target.value;
     this.ordersService.changeState(item, state).subscribe((res) => {
       // codes erreur de l'api
-      item = res;
+      Object.assign(item, res);
     });
   }
 

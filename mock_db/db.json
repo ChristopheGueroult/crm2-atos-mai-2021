@@ -4,7 +4,7 @@
       "tjmHt": 1200,
       "nbJours": 2,
       "tva": 20,
-      "state": "OPTION",
+      "state": "CONFIRMED",
       "typePresta": "coaching",
       "client": "ddd",
       "comment": "un commentaire",
@@ -19,11 +19,21 @@
       "client": "ddd",
       "comment": "un autre commentaire",
       "id": 2
+    },
+    {
+      "tjmHt": 1200,
+      "nbJours": 20,
+      "tva": 20,
+      "state": "OPTION",
+      "typePresta": "formation",
+      "client": "Capgemini",
+      "comment": "Merci Cap pour les 24k",
+      "id": 3
     }
   ],
   "clients": [
     {
-      "state": "INACTIVE",
+      "state": "ACTIVE",
       "tva": 20,
       "id": 1,
       "name": "Capgemini",
@@ -31,7 +41,7 @@
       "comment": "un comment pour client modis"
     },
     {
-      "state": "INACTIVE",
+      "state": "ACTIVE",
       "tva": 20,
       "id": 2,
       "name": "Modis",
@@ -40,7 +50,7 @@
     },
     {
       "tva": 20,
-      "state": "ACTIVE",
+      "state": "INACTIVE",
       "name": "modis",
       "totalCaHt": 0,
       "comment": "rsger",
