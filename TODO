@@ -40,3 +40,14 @@
     ☐ Déclarer la nf action(item: Order): void pour faire l'appel http.put en utilisant la methode update de orders service
     ☐ Faire le subscribe et dans le subscribe on redirige l'utilisateur vers la route orders
 
+
+☐ TP DELETE
+  ☐ PAGE LIST ORDERS HTML
+    ☐ dans la colone actions, ajouter un icon delete
+    ☐ au click sur cet icon on appel la fn delete(item.id)
+  ☐ PAGE LIST ORDERS TS
+    ☐ Déclarer la fn delete(id: number) et on app ordersService.delete(id)
+  ☐ ORDERS SERVICE TS
+    ☐ Déclarer la fn delete(id: number) et qui fait un appel http.delete
+
+

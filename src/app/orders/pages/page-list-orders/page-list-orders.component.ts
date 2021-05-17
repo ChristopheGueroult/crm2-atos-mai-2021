@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable, Subscription } from 'rxjs';
+import { Observable, Subject, Subscription } from 'rxjs';
 import { StateOrder } from 'src/app/core/enums/state-order.enum';
 import { Order } from 'src/app/core/models/order';
 import { OrdersService } from '../../services/orders.service';
@@ -17,7 +17,7 @@ export class PageListOrdersComponent implements OnInit {
   });
   private sub!: Subscription;
   // public collection!: Order[];
-  public collection$!: Observable<Order[]>;
+  public collection$!: Subject<Order[]>;
   public title = 'List Orders';
   public headers = [
     'Actions',
@@ -57,6 +57,12 @@ export class PageListOrdersComponent implements OnInit {
 
   public goToEdit(id: number): void {
     this.router.navigate(['orders', 'edit', id]);
+  }
+
+  public deleteItem(id: number): void {
+    this.ordersService.delete(id).subscribe((res) => {
+      console.log(res);
+    });
   }
 
   ngOnDestroy(): void {
