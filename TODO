@@ -1,7 +1,7 @@
-☐ Equipe des souris rouges (Yassine, Jeremy, Guillaume, Hugo)
+☐ Equipe des souris rouges (Yassine, Jeremy, Guillaume, Hugo, Jimmy, Alexy, Dorayd)
   ☐ 570
 
-☐ Equipe des souris Bleues (Enzo, Lucas, Mohamet, Laura, Evergiste)
+☐ Equipe des souris Bleues (Enzo, Lucas, Mohamet, Laura, Evergiste, Eslie, thierry, Arnaud)
   ☐ 465
 
 ☐ TP PAGE LIST CLIENTS
@@ -15,4 +15,28 @@
       ☐ Afficher : Name, TotalHT, Tva, TotalTTC, State
       ☐ Le total TTC est à calculer en utilisant le même pipe total (sans faire aucune modif dans le pipe)
       ☐ Utiliser la même directive StateDirective (sans faire aucune modif dans la directive) (pensez à créer les classe .state-active et .state-inactive dans le scss de page list clients)
+
+☐ TP PAGE EDIT ORDER
+  ☐ PAGE LIST ORDERS TS
+    ☐ Ajouter une entete au tableau 'Actions'
+  ☐ PAGE LIST ORDERS HTML
+    ☐ Devant chaque ligne ajouter un td avec un icon-edit
+    ☐ Sur icon edit ajouter un event click que vous Bindez avec une fn goToEdit(item.id)
+  ☐ PAGE LIST ORDERS TS
+    ☐ Déclarer la fn goToEdit(id: number): void qui redirige l'utilisateur vers la route orders/edit/1 (si vous avez cliquer sur l'id 1)
+  ☐ ORDERS ROUTING TS
+    ☐ Créer ou modifier la route edit pour qu'elle accepte un paramètre id dans l'url (doc sections developper guides / routing et navigation)
+  ☐ PAGE EDIT ORDER TS
+    ☐ Récupérer l'id dans l'url (ActivatedRoute) (subscribe à l'un des obs retournés par ActivatedRoute)
+  ☐ ORDERS SERVICE TS
+    ☐ Déclarer la fn getItemById(id: number) pour faire l'appel http qui vous permet de get un item à partir de son id
+  ☐ PAGE EDIT ORDER TS
+    ☐ Appeler la méthode getItemById du service pour initialiser un observable item$ à partir de cette méthode
+  ☐ PAGE EDIT ORDER HTML
+    ☐ Utiliser app-template-container en modifiant le title
+    ☐ Utiliser app-form-order en Bindant l'input init ou item de form-order.ts avec le flux de donnée retourné par la souscription à l'obersable item$ de page-edit-order.component.ts (async)
+    ☐ Utiliser le même @Output() submited ou clicked que vous bindez avec une fn
+  ☐ PAGE EDIT ORDER TS
+    ☐ Déclarer la nf action(item: Order): void pour faire l'appel http.put en utilisant la methode update de orders service
+    ☐ Faire le subscribe et dans le subscribe on redirige l'utilisateur vers la route orders
 
